@@ -1,0 +1,175 @@
+---
+// Direccion.astro
+---
+<section class="py-8 px-4 relative">
+  <div class="max-w-xl mx-auto text-center relative">
+    
+    <!-- 🏛️ ICONO DIRECCIÓN CON FLORES EN LOS BORDES -->
+    <div class="relative mb-4" id="icono-direccion">
+      
+      <!-- 🌸 FLORES EN EL BORDE IZQUIERDO (PEGADA AL BORDE DEL CONTENEDOR) -->
+      <div class="absolute left-0 top-2/3 -translate-y-1/2 w-12 pointer-events-none -ml-6 sm:-ml-7 md:-ml-8" id="flores-dir-izq">
+        <img
+          src="/imagenes/FloresBorde.webp"
+          alt="Flores decorativas izquierda"
+          class="w-full h-auto object-contain"
+        />
+      </div>
+
+      <!-- TEXTO RECEPCIÓN SOCIAL -->
+      <div class="mb-2">
+        <p class="font-charm text-2xl md:text-3xl text-[#C9A961] font-bold tracking-wide uppercase">
+          Recepción Social
+        </p>
+      </div>
+
+      <!-- ICONO CENTRAL -->
+      <div class="flex justify-center">
+        <img
+          src="/imagenes/recepcion.png"
+          alt="Icono recepción"
+          class="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain icono-dorado"
+        />
+      </div>
+
+      <!-- 🌸 FLORES EN EL BORDE DERECHO (PEGADA AL BORDE DEL CONTENEDOR) -->
+      <div class="absolute right-0 top-2/3 -translate-y-1/2 w-12 pointer-events-none -mr-6 sm:-mr-7 md:-mr-8" id="flores-dir-der">
+        <img
+          src="/imagenes/FloresBorde.webp"
+          alt="Flores decorativas derecha"
+          class="w-full h-auto object-contain scale-x-[-1]"
+        />
+      </div>
+
+    </div>
+    
+    <!-- INFORMACIÓN DE UBICACIÓN -->
+    <div class="mb-2" id="titulo-direccion">
+      <p class="font-charm text-xl md:text-lg text-[#626a54] leading-relaxed mb-2">
+        <b class="text-[#C9A961]">Centro Recreacional Don Beymar</b><br />
+        <b class="text-[#626a54]">Camargo - Bolivia</b>
+      </p>
+      <p class="font-charm text-2xl md:text-3xl text-[#626a54] font-bold mt-2">16:00 Hrs.</p>
+    </div>
+    
+    <!-- BOTÓN VER UBICACIÓN -->
+    <div class="flex justify-center" id="boton-ubicacion">
+    <a
+        href="https://maps.app.goo.gl/bfs1iS4cFo8Zd7qx5"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <img
+        src="/imagenes/VerUbicacion.webp"
+        alt="Ver ubicación en el mapa"
+        class="w-56 md:w-56 lg:w-64 h-auto object-contain cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+    </a>
+    </div>
+
+
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (typeof window !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      // Estado inicial
+      gsap.set("#icono-direccion", { opacity: 0, scale: 0.8 });
+      gsap.set("#titulo-direccion", { opacity: 0, scale: 0.9 });
+      gsap.set("#info-direccion", { opacity: 0, scale: 0.9 });
+      gsap.set("#boton-ubicacion", { opacity: 0, scale: 0.9 });
+      gsap.set("#flores-dir-izq", { opacity: 0, x: -30 });
+      gsap.set("#flores-dir-der", { opacity: 0, x: 30 });
+
+      // ✨ ANIMACIÓN SIMULTÁNEA - TODO AL MISMO TIEMPO
+      ScrollTrigger.create({
+        trigger: "#icono-direccion",
+        start: "top 85%",
+        end: "top 20%",
+        onEnter: () => {
+          const tl = gsap.timeline();
+          
+          // TODO aparece al mismo tiempo
+          tl.to("#icono-direccion, #flores-dir-izq, #flores-dir-der, #titulo-direccion, #info-direccion, #boton-ubicacion", {
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+          })
+          // Animaciones individuales (simultáneas)
+          .to("#icono-direccion", {
+            scale: 1,
+            duration: 1,
+            ease: "back.out(1.5)",
+          }, "<")
+          .to("#flores-dir-izq", {
+            x: 0,
+            duration: 1,
+            ease: "power2.out",
+          }, "<")
+          .to("#flores-dir-der", {
+            x: 0,
+            duration: 1,
+            ease: "power2.out",
+          }, "<")
+          .to("#titulo-direccion, #info-direccion, #boton-ubicacion", {
+            scale: 1,
+            duration: 1,
+            ease: "back.out(1.2)",
+          }, "<");
+        },
+        onLeaveBack: () => {
+          // Salida simultánea
+          const tl = gsap.timeline();
+          
+          tl.to("#icono-direccion, #flores-dir-izq, #flores-dir-der, #titulo-direccion, #info-direccion, #boton-ubicacion", {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.in",
+          })
+          .to("#icono-direccion", {
+            scale: 0.8,
+            duration: 0.5,
+            ease: "power2.in",
+          }, "<")
+          .to("#flores-dir-izq", {
+            x: -30,
+            duration: 0.5,
+            ease: "power2.in",
+          }, "<")
+          .to("#flores-dir-der", {
+            x: 30,
+            duration: 0.5,
+            ease: "power2.in",
+          }, "<")
+          .to("#titulo-direccion, #info-direccion, #boton-ubicacion", {
+            scale: 0.9,
+            duration: 0.5,
+            ease: "power2.in",
+          }, "<");
+        },
+      });
+
+      console.log("📍🌸 Sección de Dirección con FloresBorde.png inicializada");
+    });
+  }
+</script>
+
+<style>
+  /* Asegurar que las flores en los bordes tengan movimiento fluido */
+  .flores-borde-izq,
+  .flores-borde-der {
+    will-change: transform;
+    transition: all 0.3s ease;
+  }
+
+  /* Filtro dorado para iconos PNG */
+  .icono-dorado {
+    filter: invert(69%) sepia(40%) saturate(502%) hue-rotate(3deg) brightness(92%) contrast(95%);
+  }
+</style>

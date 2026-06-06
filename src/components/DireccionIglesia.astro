@@ -1,0 +1,158 @@
+---
+// DireccionSalon.astro (o el nombre que uses)
+---
+<section class="py-8 px-4 relative">
+  <div class="max-w-xl mx-auto text-center relative">
+    
+    <!-- TEXTO CEREMONIA RELIGIOSA -->
+    <div class="mb-2" id="icono-salon">
+      <h2 class="font-charm text-2xl md:text-3xl text-[#C9A961] font-bold tracking-wide uppercase">
+        Ceremonia Religiosa
+      </h2>
+    </div>
+
+    <!-- 🏛️ ICONO DIRECCIÓN CON FLORES -->
+    <div class="relative mb-4" id="icono-iglesia-img">
+
+      <!-- 🌸 FLORES EN EL BORDE IZQUIERDO -->
+      <div class="absolute left-0 top-2/3 -translate-y-1/2 w-12 pointer-events-none -ml-6 sm:-ml-7 md:-ml-8" id="flores-igl-izq">
+        <img
+          src="/imagenes/FloresBorde.webp"
+          alt="Flores decorativas izquierda"
+          class="w-full h-auto object-contain"
+        />
+      </div>
+
+      <!-- ICONO CENTRAL -->
+      <div class="flex justify-center">
+        <img
+          src="/imagenes/iglesia.png"
+          alt="Icono iglesia"
+          class="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain icono-dorado"
+        />
+      </div>
+
+      <!-- 🌸 FLORES EN EL BORDE DERECHO -->
+      <div class="absolute right-0 top-2/3 -translate-y-1/2 w-12 pointer-events-none -mr-6 sm:-mr-7 md:-mr-8" id="flores-igl-der">
+        <img
+          src="/imagenes/FloresBorde.webp"
+          alt="Flores decorativas derecha"
+          class="w-full h-auto object-contain scale-x-[-1]"
+        />
+      </div>
+
+    </div>
+    
+    <!-- INFORMACIÓN DE UBICACIÓN -->
+    <div class="mb-2" id="titulo-salon">
+      <p class="font-charm text-xl md:text-lg text-[#626a54] leading-relaxed mb-2">
+        <b class="text-[#C9A961]">Iglesia Matriz de Camargo</b><br />
+        <b class="text-[#626a54]">Camargo - Bolivia</b>
+      </p>
+      <p class="font-charm text-2xl md:text-3xl text-[#626a54] font-bold mt-2">14:30 Hrs.</p>
+    </div>
+    
+    <!-- BOTÓN VER UBICACIÓN -->
+    <div class="flex justify-center" id="boton-salon">
+      
+    <a
+        href="https://maps.app.goo.gl/DtRE2h5LQyYtvC919"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <img
+        src="/imagenes/VerUbicacion.webp"
+        alt="Ver ubicación en el mapa"
+        class="w-56 md:w-56 lg:w-64 h-auto object-contain cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+    </a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (typeof window !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      // Estado inicial
+      gsap.set("#icono-salon", { opacity: 0, scale: 0.8 });
+      gsap.set("#titulo-salon", { opacity: 0, scale: 0.9 });
+      gsap.set("#info-salon", { opacity: 0, scale: 0.9 });
+      gsap.set("#boton-salon", { opacity: 0, scale: 0.9 });
+      gsap.set("#flores-igl-izq", { opacity: 0, x: -30 });
+      gsap.set("#flores-igl-der", { opacity: 0, x: 30 });
+
+      // ✨ ANIMACIÓN SIMULTÁNEA - TODO AL MISMO TIEMPO
+      ScrollTrigger.create({
+        trigger: "#icono-salon",
+        start: "top 85%",
+        end: "top 20%",
+        onEnter: () => {
+          const tl = gsap.timeline();
+
+          tl.to("#icono-salon, #titulo-salon, #info-salon, #boton-salon", {
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+          })
+          .to("#icono-salon", {
+            scale: 1,
+            duration: 1,
+            ease: "back.out(1.5)",
+          }, "<")
+          .to("#titulo-salon, #info-salon, #boton-salon", {
+            scale: 1,
+            duration: 1,
+            ease: "back.out(1.2)",
+          }, "<")
+          .to("#flores-igl-izq", {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power2.out",
+          }, "<")
+          .to("#flores-igl-der", {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power2.out",
+          }, "<");
+        },
+        onLeaveBack: () => {
+          // Salida simultánea
+          const tl = gsap.timeline();
+          
+          tl.to("#icono-salon, #titulo-salon, #info-salon, #boton-salon", {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.in",
+          })
+          .to("#icono-salon", {
+            scale: 0.8,
+            duration: 0.5,
+            ease: "power2.in",
+          }, "<")
+          .to("#titulo-salon, #info-salon, #boton-salon", {
+            scale: 0.9,
+            duration: 0.5,
+            ease: "power2.in",
+          }, "<");
+        },
+      });
+
+      console.log("🎉 Sección de Salón inicializada");
+    });
+  }
+
+</script>
+
+<style>
+  .icono-dorado {
+    filter: invert(69%) sepia(40%) saturate(502%) hue-rotate(3deg) brightness(92%) contrast(95%);
+  }
+</style>

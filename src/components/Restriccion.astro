@@ -1,0 +1,92 @@
+---
+// Restriccion.astro
+---
+
+<section class="py-8 px-4 relative overflow-hidden">
+
+  <div class="max-w-xl mx-auto text-center relative z-10">
+
+    <!-- SEPARADOR SUPERIOR -->
+    <div class="flex justify-center mb-6" id="restriccion-separador">
+      <img
+        src="/imagenes/Separadores.webp"
+        alt="Separador decorativo"
+        class="w-32 md:w-40 h-auto object-contain opacity-90"
+      />
+    </div>
+
+    <!-- TÍTULO -->
+    <div class="mb-3" id="restriccion-titulo">
+      <h2 class="font-charm text-2xl md:text-3xl text-[#C9A961] font-bold tracking-wide mb-3">
+        SOLO PARA ADULTOS
+      </h2>
+      <div class="flex items-center justify-center gap-3">
+        <div class="w-16 h-[2px] bg-gradient-to-r from-transparent to-[#C9A961]"></div>
+        <div class="w-2 h-2 rounded-full bg-[#C9A961]"></div>
+        <div class="w-16 h-[2px] bg-gradient-to-l from-transparent to-[#C9A961]"></div>
+      </div>
+    </div>
+
+    <!-- ICONO -->
+    <div class="flex justify-center mb-4" id="restriccion-icono">
+      <img
+        src="/imagenes/restriccion.png"
+        alt="Solo para adultos"
+        class="w-20 h-20 object-contain icono-dorado"
+      />
+    </div>
+
+    <!-- TEXTO -->
+    <div id="restriccion-texto">
+      <p class="font-charm text-xl md:text-2xl text-[#626a54] leading-relaxed">
+        Con todo el cariño del mundo,<br />
+        les comunicamos que esta celebración<br />
+        es <span class="text-[#C9A961] font-bold">exclusivamente para adultos</span>.<br />
+        ¡Los esperamos para disfrutar juntos<br />esta noche tan especial!
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .icono-dorado {
+    filter: invert(69%) sepia(40%) saturate(502%) hue-rotate(3deg) brightness(92%) contrast(95%);
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (typeof window !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.set("#restriccion-separador", { opacity: 0, y: -20 });
+      gsap.set("#restriccion-titulo", { opacity: 0, y: 20 });
+      gsap.set("#restriccion-icono", { opacity: 0, scale: 0.6 });
+      gsap.set("#restriccion-texto", { opacity: 0, y: 20 });
+      gsap.set("#restriccion-deco", { opacity: 0 });
+
+      ScrollTrigger.create({
+        trigger: "#restriccion-separador",
+        start: "top 85%",
+        onEnter: () => {
+          const tl = gsap.timeline();
+          tl.to("#restriccion-separador", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" })
+            .to("#restriccion-titulo", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.4")
+            .to("#restriccion-icono", { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.7)" }, "-=0.4")
+            .to("#restriccion-texto", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.4")
+            .to("#restriccion-deco", { opacity: 1, duration: 0.6 }, "-=0.3");
+        },
+        onLeaveBack: () => {
+          gsap.set("#restriccion-separador", { opacity: 0, y: -20 });
+          gsap.set("#restriccion-titulo", { opacity: 0, y: 20 });
+          gsap.set("#restriccion-icono", { opacity: 0, scale: 0.6 });
+          gsap.set("#restriccion-texto", { opacity: 0, y: 20 });
+          gsap.set("#restriccion-deco", { opacity: 0 });
+        },
+      });
+    });
+  }
+</script>
