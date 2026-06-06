@@ -1,0 +1,524 @@
+---
+// Hoteles.astro
+---
+
+<section class="relative w-full py-14 px-6 overflow-hidden">
+    <!-- Flores decorativas — sin scale-x en HTML, todo controlado por GSAP -->
+    <img
+        src="/imagenes/hojadorada.png"
+        alt=""
+        class="absolute left-0 top-16 w-18 md:w-24 opacity-0 pointer-events-none z-10"
+        id="hoja-hot-izq"
+    />
+    <img
+        src="/imagenes/florlateral.png"
+        alt=""
+        class="absolute left-0 top-20 w-18 md:w-24 opacity-0 pointer-events-none z-[11]"
+        id="flor-hot-izq"
+    />
+    <img
+        src="/imagenes/hojadorada.png"
+        alt=""
+        class="absolute right-0 top-16 w-18 md:w-24 opacity-0 pointer-events-none z-10"
+        id="hoja-hot-der"
+    />
+    <img
+        src="/imagenes/florlateral.png"
+        alt=""
+        class="absolute right-0 top-20 w-18 md:w-24 opacity-0 pointer-events-none z-[11]"
+        id="flor-hot-der"
+    />
+
+    <div class="max-w-xl mx-auto relative z-10" id="wrapper-hoteles">
+        <!-- Título -->
+        <div class="text-center mb-10 opacity-0" id="hoteles-titulo">
+            <h3
+                class="text-[#9C7A2E] tracking-[0.25em] uppercase text-xl md:text-2xl font-semibold mb-3"
+            >
+                Hospedaje
+            </h3>
+            <div class="flex items-center justify-center gap-3 mb-5">
+                <div
+                    class="w-14 h-[1px] bg-gradient-to-r from-transparent to-[#C9A961]"
+                >
+                </div>
+                <div class="w-2 h-2 rounded-full bg-[#C9A961]"></div>
+                <div
+                    class="w-14 h-[1px] bg-gradient-to-l from-transparent to-[#C9A961]"
+                >
+                </div>
+            </div>
+            <!-- Icono hotel -->
+            <div class="flex justify-center mb-4">
+                <img
+                    src="/iconos/hoteles.png"
+                    alt="Hotel"
+                    class="w-14 h-14 md:w-16 md:h-16 object-contain hotel-icon-filter"
+                />
+            </div>
+            <p
+                class="font-charm text-[#626a54] text-lg md:text-xl leading-relaxed"
+            >
+                Para nuestros invitados que vienen de fuera, hemos seleccionado
+                algunas opciones de hospedaje en Camargo para su comodidad. Les
+                recomendamos realizar su reserva con anticipación.
+            </p>
+        </div>
+
+        <!-- Grid de tarjetas -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Hotel 1 -->
+            <div
+                class="hotel-card opacity-0 bg-white/80 rounded-2xl shadow-sm overflow-hidden flex flex-col items-center text-center pt-0 pb-7 px-6"
+            >
+                <div
+                    class="w-full h-1 bg-gradient-to-r from-[#C9A961]/40 via-[#C9A961] to-[#C9A961]/40 mb-6"
+                >
+                </div>
+                <p
+                    class="font-charm text-[#C9A961] text-2xl md:text-3xl font-bold mb-1 leading-tight"
+                >
+                    Hostal Camargo
+                </p>
+                <p class="text-[#626a54] text-sm mb-5 tracking-wide">
+                    Camargo, Chuquisaca
+                </p>
+                <div class="relative mt-auto">
+                    <a
+                        href="https://wa.me/59173357575"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-[#C9A961] hover:bg-[#b8943a] text-white px-6 py-2.5 rounded text-base md:text-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg tracking-wider"
+                    >
+                        <svg
+                            class="w-5 h-5 shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                            ></path>
+                        </svg>
+                        73357575
+                    </a>
+                    <img
+                        src="/imagenes/mano.png"
+                        alt=""
+                        class="absolute -bottom-5 -right-6 w-9 h-9 object-contain opacity-0 pointer-events-none z-20"
+                        id="mano-h1"
+                    />
+                </div>
+            </div>
+
+            <!-- Hotel 2 -->
+            <div
+                class="hotel-card opacity-0 bg-white/80 rounded-2xl shadow-sm overflow-hidden flex flex-col items-center text-center pt-0 pb-7 px-6"
+            >
+                <div
+                    class="w-full h-1 bg-gradient-to-r from-[#C9A961]/40 via-[#C9A961] to-[#C9A961]/40 mb-6"
+                >
+                </div>
+                <p
+                    class="font-charm text-[#C9A961] text-2xl md:text-3xl font-bold mb-1 leading-tight"
+                >
+                    Hostal Plaza
+                </p>
+                <p class="text-[#626a54] text-sm mb-5 tracking-wide">
+                    Camargo, Chuquisaca
+                </p>
+                <div class="relative mt-auto">
+                    <a
+                        href="https://wa.me/59173471211"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-[#C9A961] hover:bg-[#b8943a] text-white px-6 py-2.5 rounded text-base md:text-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg tracking-wider"
+                    >
+                        <svg
+                            class="w-5 h-5 shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                            ></path>
+                        </svg>
+                        73471211
+                    </a>
+                    <img
+                        src="/imagenes/mano.png"
+                        alt=""
+                        class="absolute -bottom-5 -right-6 w-9 h-9 object-contain opacity-0 pointer-events-none z-20"
+                        id="mano-h2"
+                    />
+                </div>
+            </div>
+
+            <!-- Hotel 3 -->
+            <div
+                class="hotel-card opacity-0 bg-white/80 rounded-2xl shadow-sm overflow-hidden flex flex-col items-center text-center pt-0 pb-7 px-6"
+            >
+                <div
+                    class="w-full h-1 bg-gradient-to-r from-[#C9A961]/40 via-[#C9A961] to-[#C9A961]/40 mb-6"
+                >
+                </div>
+                <p
+                    class="font-charm text-[#C9A961] text-2xl md:text-3xl font-bold mb-1 leading-tight"
+                >
+                    Mamá Blanca
+                </p>
+                <p class="text-[#626a54] text-sm mb-5 tracking-wide">
+                    Camargo, Chuquisaca
+                </p>
+                <div class="relative mt-auto">
+                    <a
+                        href="https://wa.me/59167602553"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-[#C9A961] hover:bg-[#b8943a] text-white px-6 py-2.5 rounded text-base md:text-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg tracking-wider"
+                    >
+                        <svg
+                            class="w-5 h-5 shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                            ></path>
+                        </svg>
+                        67602553
+                    </a>
+                    <img
+                        src="/imagenes/mano.png"
+                        alt=""
+                        class="absolute -bottom-5 -right-6 w-9 h-9 object-contain opacity-0 pointer-events-none z-20"
+                        id="mano-h3"
+                    />
+                </div>
+            </div>
+
+            <!-- Hotel 4 -->
+            <div
+                class="hotel-card opacity-0 bg-white/80 rounded-2xl shadow-sm overflow-hidden flex flex-col items-center text-center pt-0 pb-7 px-6"
+            >
+                <div
+                    class="w-full h-1 bg-gradient-to-r from-[#C9A961]/40 via-[#C9A961] to-[#C9A961]/40 mb-6"
+                >
+                </div>
+                <p
+                    class="font-charm text-[#C9A961] text-2xl md:text-3xl font-bold mb-1 leading-tight"
+                >
+                    Mi Huerta Los Cactus
+                </p>
+                <p class="text-[#626a54] text-sm mb-5 tracking-wide">
+                    Camargo, Chuquisaca
+                </p>
+                <div class="relative mt-auto">
+                    <a
+                        href="https://wa.me/59177265959"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-[#C9A961] hover:bg-[#b8943a] text-white px-6 py-2.5 rounded text-base md:text-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg tracking-wider"
+                    >
+                        <svg
+                            class="w-5 h-5 shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                            ></path>
+                        </svg>
+                        77265959
+                    </a>
+                    <img
+                        src="/imagenes/mano.png"
+                        alt=""
+                        class="absolute -bottom-5 -right-6 w-9 h-9 object-contain opacity-0 pointer-events-none z-20"
+                        id="mano-h4"
+                    />
+                </div>
+            </div>
+
+            <!-- Hotel 5 — centrado -->
+            <div
+                class="hotel-card opacity-0 bg-white/80 rounded-2xl shadow-sm overflow-hidden flex flex-col items-center text-center pt-0 pb-7 px-6 sm:col-span-2 sm:max-w-xs sm:mx-auto sm:w-full"
+            >
+                <div
+                    class="w-full h-1 bg-gradient-to-r from-[#C9A961]/40 via-[#C9A961] to-[#C9A961]/40 mb-6"
+                >
+                </div>
+                <p
+                    class="font-charm text-[#C9A961] text-2xl md:text-3xl font-bold mb-1 leading-tight"
+                >
+                    El Gilgal
+                </p>
+                <p class="text-[#626a54] text-sm mb-5 tracking-wide">
+                    Camargo, Chuquisaca
+                </p>
+                <div class="relative mt-auto">
+                    <a
+                        href="https://wa.me/59178999072"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-[#C9A961] hover:bg-[#b8943a] text-white px-6 py-2.5 rounded text-base md:text-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg tracking-wider"
+                    >
+                        <svg
+                            class="w-5 h-5 shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                            ></path>
+                        </svg>
+                        78999072
+                    </a>
+                    <img
+                        src="/imagenes/mano.png"
+                        alt=""
+                        class="absolute -bottom-5 -right-6 w-9 h-9 object-contain opacity-0 pointer-events-none z-20"
+                        id="mano-h5"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hotel-icon-filter {
+        filter: brightness(0) saturate(100%) invert(56%) sepia(77%)
+            saturate(419%) hue-rotate(5deg) brightness(94%) contrast(92%);
+    }
+</style>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const initHoteles = () => {
+        // Estado inicial — izquierda normal, derecha volteada con scaleX:-1 desde GSAP
+        gsap.set("#hoteles-titulo", { opacity: 0, y: 25 });
+        gsap.set(".hotel-card", { opacity: 0, y: 30, scale: 0.97 });
+        gsap.set("#mano-h1, #mano-h2, #mano-h3, #mano-h4, #mano-h5", {
+            opacity: 0,
+            scale: 0.8,
+        });
+
+        gsap.set("#flor-hot-izq", {
+            opacity: 0,
+            x: -20,
+            scaleX: 1,
+            scaleY: 1,
+            rotation: 0,
+            y: 0,
+        });
+        gsap.set("#hoja-hot-izq", {
+            opacity: 0,
+            x: -20,
+            scaleX: 1,
+            scaleY: 1,
+            rotation: 0,
+            y: 0,
+        });
+        gsap.set("#flor-hot-der", {
+            opacity: 0,
+            x: 20,
+            scaleX: -1,
+            scaleY: 1,
+            rotation: 0,
+            y: 0,
+        });
+        gsap.set("#hoja-hot-der", {
+            opacity: 0,
+            x: 20,
+            scaleX: -1,
+            scaleY: 1,
+            rotation: 0,
+            y: 0,
+        });
+
+        ScrollTrigger.create({
+            trigger: "#wrapper-hoteles",
+            start: "top 80%",
+            end: "top 20%",
+
+            onEnter: () => {
+                const tl = gsap.timeline();
+
+                tl.to(
+                    "#hoteles-titulo",
+                    { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
+                    0,
+                )
+                    .to(
+                        ".hotel-card",
+                        {
+                            opacity: 1,
+                            y: 0,
+                            scale: 1,
+                            duration: 0.8,
+                            stagger: 0.15,
+                            ease: "power2.out",
+                        },
+                        0.4,
+                    )
+                    .to(
+                        "#mano-h1, #mano-h2, #mano-h3, #mano-h4, #mano-h5",
+                        {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.4,
+                            stagger: 0.15,
+                            ease: "back.out(2)",
+                        },
+                        0.9,
+                    )
+                    .to(
+                        "#flor-hot-izq",
+                        { opacity: 0.8, x: 0, duration: 1, ease: "power2.out" },
+                        0.5,
+                    )
+                    .to(
+                        "#flor-hot-der",
+                        { opacity: 0.8, x: 0, duration: 1, ease: "power2.out" },
+                        0.5,
+                    )
+                    .to(
+                        "#hoja-hot-izq",
+                        {
+                            opacity: 0.9,
+                            x: 0,
+                            duration: 1.2,
+                            ease: "power2.out",
+                        },
+                        1.5,
+                    )
+                    .to(
+                        "#hoja-hot-der",
+                        {
+                            opacity: 0.9,
+                            x: 0,
+                            duration: 1.2,
+                            ease: "power2.out",
+                        },
+                        1.5,
+                    );
+
+                // Mano pulsando
+                gsap.to("#mano-h1, #mano-h2, #mano-h3, #mano-h4, #mano-h5", {
+                    scale: 0.88,
+                    duration: 0.6,
+                    ease: "power1.inOut",
+                    repeat: -1,
+                    yoyo: true,
+                    delay: 1.5,
+                });
+
+                // Movimiento natural — solo Y para las flores, sin rotation en las de la derecha
+                gsap.to("#flor-hot-izq", {
+                    y: -10,
+                    rotation: -8,
+                    duration: 3.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 2.5,
+                });
+                gsap.to("#hoja-hot-izq", {
+                    y: -12,
+                    rotation: -10,
+                    duration: 4,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 2.8,
+                });
+                gsap.to("#flor-hot-der", {
+                    y: -10,
+                    duration: 3.8,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 2.7,
+                });
+                gsap.to("#hoja-hot-der", {
+                    y: -12,
+                    duration: 4.3,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                    delay: 3,
+                });
+            },
+
+            onLeaveBack: () => {
+                gsap.killTweensOf(
+                    "#mano-h1, #mano-h2, #mano-h3, #mano-h4, #mano-h5",
+                );
+                gsap.killTweensOf("#flor-hot-izq");
+                gsap.killTweensOf("#flor-hot-der");
+                gsap.killTweensOf("#hoja-hot-izq");
+                gsap.killTweensOf("#hoja-hot-der");
+
+                // Reset completo incluyendo rotation y y, para evitar acumulación
+                gsap.set("#flor-hot-izq", {
+                    opacity: 0,
+                    x: -20,
+                    scaleX: 1,
+                    scaleY: 1,
+                    rotation: 0,
+                    y: 0,
+                });
+                gsap.set("#hoja-hot-izq", {
+                    opacity: 0,
+                    x: -20,
+                    scaleX: 1,
+                    scaleY: 1,
+                    rotation: 0,
+                    y: 0,
+                });
+                gsap.set("#flor-hot-der", {
+                    opacity: 0,
+                    x: 20,
+                    scaleX: -1,
+                    scaleY: 1,
+                    rotation: 0,
+                    y: 0,
+                });
+                gsap.set("#hoja-hot-der", {
+                    opacity: 0,
+                    x: 20,
+                    scaleX: -1,
+                    scaleY: 1,
+                    rotation: 0,
+                    y: 0,
+                });
+
+                gsap.to("#hoteles-titulo", {
+                    opacity: 0,
+                    y: 25,
+                    duration: 0.4,
+                    ease: "power2.in",
+                });
+                gsap.to(".hotel-card", {
+                    opacity: 0,
+                    y: 30,
+                    scale: 0.97,
+                    duration: 0.4,
+                    ease: "power2.in",
+                });
+                gsap.to("#mano-h1, #mano-h2, #mano-h3, #mano-h4, #mano-h5", {
+                    opacity: 0,
+                    scale: 0.8,
+                    duration: 0.3,
+                });
+            },
+        });
+    };
+
+    document.addEventListener("DOMContentLoaded", initHoteles);
+    document.addEventListener("astro:page-load", initHoteles);
+</script>

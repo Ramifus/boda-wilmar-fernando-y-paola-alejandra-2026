@@ -1,0 +1,454 @@
+---
+// Hoteles.astro
+---
+
+<section class="relative w-full py-12 px-6 overflow-hidden">
+    <!-- Partículas flotantes de fondo -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+            class="particula-dorada"
+            style="left: 10%; top: 20%; animation-delay: 0s;"
+        >
+        </div>
+        <div
+            class="particula-dorada"
+            style="left: 85%; top: 30%; animation-delay: 1.5s;"
+        >
+        </div>
+        <div
+            class="particula-dorada"
+            style="left: 15%; top: 70%; animation-delay: 3s;"
+        >
+        </div>
+        <div
+            class="particula-dorada"
+            style="left: 90%; top: 65%; animation-delay: 2s;"
+        >
+        </div>
+    </div>
+
+    <div
+        class="max-w-sm lg:max-w-3xl mx-auto relative z-10"
+        id="contenedor-hoteles"
+    >
+        <!-- MARCO PRINCIPAL -->
+        <div
+            class="backdrop-blur-sm rounded-3xl border-2 border-[#0F3D2E]/25 p-8 shadow-sm relative overflow-hidden"
+        >
+            <!-- Brillo sutil -->
+            <div
+                class="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-[#0F3D2E]/10 to-transparent rounded-full blur-3xl animate-pulse-slow"
+            >
+            </div>
+            <div
+                class="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-tr from-[#0F3D2E]/8 to-transparent rounded-full blur-3xl animate-pulse-slow"
+                style="animation-delay: 1s;"
+            >
+            </div>
+
+            <div class="text-center relative" id="tarjeta-hoteles">
+                <!-- Icono -->
+                <div class="flex justify-center mb-6">
+                    <div class="w-16 h-16 relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-[#9C7A2E]/20 to-[#9C7A2E]/5 rounded-full blur-xl animate-pulse-slow"
+                        >
+                        </div>
+                        <img
+                            src="/iconos/reserva.png"
+                            alt="Icono hotel"
+                            class="w-full h-full object-contain relative z-10 transform transition-transform duration-300 hover:scale-110 verde-filter"
+                        />
+                    </div>
+                </div>
+
+                <!-- Título -->
+                <h3
+                    class="text-[#9C7A2E] tracking-[0.3em] uppercase text-xl md:text-2xl mb-2 relative inline-block"
+                >
+                    Hospedaje
+                </h3>
+                <div class="flex justify-center mb-4">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#0F3D2E]/40"></div>
+                </div>
+
+                <!-- Subtexto -->
+                <p
+                    class="font-charm text-[#0F3D2E] text-lg md:text-xl leading-relaxed mb-8"
+                >
+                    Para los invitados que vienen de fuera, compartimos algunas
+                    opciones de hospedaje en Camargo. ¡Reserva con anticipación!
+                </p>
+
+                <!-- Tarjetas de hoteles -->
+                <div class="space-y-3">
+                    <!-- Hostal Camargo -->
+                    <a
+                        href="https://wa.me/59173357575"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hotel-card flex items-center justify-between gap-4 px-5 py-4 rounded-2xl border border-[#9C7A2E]/30 bg-white/60 hover:bg-[#9C7A2E]/10 transition-all duration-300 hover:border-[#9C7A2E] group"
+                    >
+                        <div class="text-left">
+                            <p
+                                class="font-charm text-[#0F3D2E] text-lg md:text-2xl font-semibold leading-tight"
+                            >
+                                Hostal Camargo
+                            </p>
+                            <p
+                                class="text-[#9C7A2E] text-sm md:text-base tracking-wider mt-0.5"
+                            >
+                                73357575
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                            <span
+                                class="text-[#0F3D2E]/60 text-xs md:text-sm group-hover:text-[#9C7A2E] transition-colors"
+                                >Reservar</span
+                            >
+                            <svg
+                                class="w-7 h-7 text-[#25D366]"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <!-- Hostal Plaza -->
+                    <a
+                        href="https://wa.me/59173471211"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hotel-card flex items-center justify-between gap-4 px-5 py-4 rounded-2xl border border-[#9C7A2E]/30 bg-white/60 hover:bg-[#9C7A2E]/10 transition-all duration-300 hover:border-[#9C7A2E] group"
+                    >
+                        <div class="text-left">
+                            <p
+                                class="font-charm text-[#0F3D2E] text-lg md:text-2xl font-semibold leading-tight"
+                            >
+                                Hostal Plaza
+                            </p>
+                            <p
+                                class="text-[#9C7A2E] text-sm md:text-base tracking-wider mt-0.5"
+                            >
+                                73471211
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                            <span
+                                class="text-[#0F3D2E]/60 text-xs md:text-sm group-hover:text-[#9C7A2E] transition-colors"
+                                >Reservar</span
+                            >
+                            <svg
+                                class="w-7 h-7 text-[#25D366]"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <!-- Mamá Blanca -->
+                    <a
+                        href="https://wa.me/59167602553"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hotel-card flex items-center justify-between gap-4 px-5 py-4 rounded-2xl border border-[#9C7A2E]/30 bg-white/60 hover:bg-[#9C7A2E]/10 transition-all duration-300 hover:border-[#9C7A2E] group"
+                    >
+                        <div class="text-left">
+                            <p
+                                class="font-charm text-[#0F3D2E] text-lg md:text-2xl font-semibold leading-tight"
+                            >
+                                Mamá Blanca
+                            </p>
+                            <p
+                                class="text-[#9C7A2E] text-sm md:text-base tracking-wider mt-0.5"
+                            >
+                                67602553
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                            <span
+                                class="text-[#0F3D2E]/60 text-xs md:text-sm group-hover:text-[#9C7A2E] transition-colors"
+                                >Reservar</span
+                            >
+                            <svg
+                                class="w-7 h-7 text-[#25D366]"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <!-- Mi Huerta Los Cactus -->
+                    <a
+                        href="https://wa.me/59177265959"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hotel-card flex items-center justify-between gap-4 px-5 py-4 rounded-2xl border border-[#9C7A2E]/30 bg-white/60 hover:bg-[#9C7A2E]/10 transition-all duration-300 hover:border-[#9C7A2E] group"
+                    >
+                        <div class="text-left">
+                            <p
+                                class="font-charm text-[#0F3D2E] text-lg md:text-2xl font-semibold leading-tight"
+                            >
+                                Mi Huerta Los Cactus
+                            </p>
+                            <p
+                                class="text-[#9C7A2E] text-sm md:text-base tracking-wider mt-0.5"
+                            >
+                                77265959
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                            <span
+                                class="text-[#0F3D2E]/60 text-xs md:text-sm group-hover:text-[#9C7A2E] transition-colors"
+                                >Reservar</span
+                            >
+                            <svg
+                                class="w-7 h-7 text-[#25D366]"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <!-- El Gilgal -->
+                    <a
+                        href="https://wa.me/59178999072"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hotel-card flex items-center justify-between gap-4 px-5 py-4 rounded-2xl border border-[#9C7A2E]/30 bg-white/60 hover:bg-[#9C7A2E]/10 transition-all duration-300 hover:border-[#9C7A2E] group"
+                    >
+                        <div class="text-left">
+                            <p
+                                class="font-charm text-[#0F3D2E] text-lg md:text-2xl font-semibold leading-tight"
+                            >
+                                El Gilgal
+                            </p>
+                            <p
+                                class="text-[#9C7A2E] text-sm md:text-base tracking-wider mt-0.5"
+                            >
+                                78999072
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                            <span
+                                class="text-[#0F3D2E]/60 text-xs md:text-sm group-hover:text-[#9C7A2E] transition-colors"
+                                >Reservar</span
+                            >
+                            <svg
+                                class="w-7 h-7 text-[#25D366]"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hojas decorativas -->
+    <img
+        src="/imagenes/hojadorada.png"
+        alt=""
+        class="absolute left-0 top-12 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-20"
+        id="hoja-hoteles-left"
+    />
+    <img
+        src="/imagenes/florlateral.png"
+        alt=""
+        class="absolute left-0 top-18 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-30"
+        id="flor-hoteles-left"
+    />
+    <img
+        src="/imagenes/hojadorada.png"
+        alt=""
+        class="absolute right-0 top-12 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-20 scale-x-[-1]"
+        id="hoja-hoteles-right"
+    />
+    <img
+        src="/imagenes/florlateral.png"
+        alt=""
+        class="absolute right-0 top-18 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-30 scale-x-[-1]"
+        id="flor-hoteles-right"
+    />
+</section>
+
+<style>
+    .particula-dorada {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #9c7a2e;
+        border-radius: 50%;
+        opacity: 0.3;
+        animation: flotar 6s ease-in-out infinite;
+    }
+    @keyframes flotar {
+        0%,
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 0.3;
+        }
+        50% {
+            transform: translateY(-20px) scale(1.2);
+            opacity: 0.6;
+        }
+    }
+    .animate-pulse-slow {
+        animation: pulse 4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+        0%,
+        100% {
+            opacity: 0.3;
+        }
+        50% {
+            opacity: 0.6;
+        }
+    }
+    .verde-filter {
+        filter: brightness(0) saturate(100%) invert(20%) sepia(40%)
+            saturate(500%) hue-rotate(120deg) brightness(80%) contrast(90%);
+    }
+</style>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const initHoteles = () => {
+        gsap.set("#contenedor-hoteles", { opacity: 0, y: 30 });
+        gsap.set("#flor-hoteles-left", { opacity: 0, x: -40 });
+        gsap.set("#flor-hoteles-right", { opacity: 0, x: 40 });
+        gsap.set("#hoja-hoteles-left", { opacity: 0, x: -50 });
+        gsap.set("#hoja-hoteles-right", { opacity: 0, x: 50 });
+        gsap.set(".hotel-card", { opacity: 0, y: 20 });
+
+        ScrollTrigger.create({
+            trigger: "#contenedor-hoteles",
+            start: "top 80%",
+            end: "top 20%",
+
+            onEnter: () => {
+                const tl = gsap.timeline();
+
+                tl.to(
+                    "#contenedor-hoteles",
+                    { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" },
+                    0,
+                )
+                    .to(
+                        ".hotel-card",
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.8,
+                            stagger: 0.12,
+                            ease: "power2.out",
+                        },
+                        0.4,
+                    )
+                    .to(
+                        "#flor-hoteles-left",
+                        {
+                            opacity: 0.75,
+                            x: 0,
+                            duration: 1,
+                            ease: "power2.out",
+                        },
+                        0.5,
+                    )
+                    .to(
+                        "#flor-hoteles-right",
+                        {
+                            opacity: 0.75,
+                            x: 0,
+                            duration: 1,
+                            ease: "power2.out",
+                        },
+                        0.5,
+                    )
+                    .to(
+                        "#hoja-hoteles-left",
+                        {
+                            opacity: 0.7,
+                            x: 0,
+                            duration: 1.2,
+                            ease: "power2.out",
+                        },
+                        0.7,
+                    )
+                    .to(
+                        "#hoja-hoteles-right",
+                        {
+                            opacity: 0.7,
+                            x: 0,
+                            duration: 1.2,
+                            ease: "power2.out",
+                        },
+                        0.7,
+                    );
+            },
+
+            onLeaveBack: () => {
+                gsap.to("#contenedor-hoteles", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.5,
+                    ease: "power2.in",
+                });
+                gsap.to(".hotel-card", {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.4,
+                    ease: "power2.in",
+                });
+                gsap.to("#flor-hoteles-left", {
+                    opacity: 0,
+                    x: -40,
+                    duration: 0.5,
+                });
+                gsap.to("#flor-hoteles-right", {
+                    opacity: 0,
+                    x: 40,
+                    duration: 0.5,
+                });
+                gsap.to("#hoja-hoteles-left", {
+                    opacity: 0,
+                    x: -50,
+                    duration: 0.5,
+                });
+                gsap.to("#hoja-hoteles-right", {
+                    opacity: 0,
+                    x: 50,
+                    duration: 0.5,
+                });
+            },
+        });
+    };
+
+    document.addEventListener("DOMContentLoaded", initHoteles);
+    document.addEventListener("astro:page-load", initHoteles);
+</script>

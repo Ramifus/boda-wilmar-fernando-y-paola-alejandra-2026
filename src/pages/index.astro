@@ -1,39 +1,58 @@
 ---
 // src/pages/index.astro
 import Layout from "../layouts/Layout.astro";
-
+import Portada from "../components/Portada.astro";
 import NombresFlores from "../components/NombresFlores.astro";
-import Reproductor from "../components/Reproductor.astro";
 import Dedicatoria from "../components/Dedicatoria.astro";
-import Nombres from "../components/Nombres.astro";
+import Reproductor from "../components/Reproductor.astro";
+import Bendicion from "../components/Bendicion.astro";
+import NombrePadres from "../components/NombresPadres.astro";
 import Fecha from "../components/Fecha.astro";
 import Contador from "../components/Contador.astro";
-import Calendario from "../components/Calendario.astro";
-import Direccion from "../components/Direccion.astro";
-import DireccionIglesia from "../components/DireccionIglesia.astro";
+import Foto2 from "../components/Foto2.astro";
+import DireccionCeremonia from "../components/DireccionCeremonia.astro";
+import DireccionRecepcion from "../components/DireccionRecepcion.astro";
 import Itinerario from "../components/Itinerario.astro";
+import Reservas from "../components/Reservas.astro";
+import SugerenciaRegalo from "../components/SugerenciaRegalo.astro";
 import CodigoVestimenta from "../components/CodigoVestimenta.astro";
-import GaleriaFotos from "../components/GaleriaFotos.astro";
-import Despedida from "../components/Despedida.astro";
-import FloresAbajo from "../components/FloresAbajo.astro";
 import Restriccion from "../components/Restriccion.astro";
+import Hoteles from "../components/Hoteles.astro";
+import Confirmar from "../components/Confirmar.astro";
+import DespedidaDedicatoria from "../components/DespedidaDedicatoria.astro";
+import Foto3 from "../components/foto3.astro";
+import Foto4 from "../components/foto4.astro";
+import Des from "../components/Des.astro";
+import Galeria from "../components/Galeria.astro";
 ---
 
 <Layout title="Boda">
-    <NombresFlores />
-    <Reproductor />
-    <Dedicatoria />
-    <Nombres />
-    <Fecha />
-    <Contador />
-    <Calendario />
-    <DireccionIglesia />
-    <Direccion />
+    <!-- PORTADA (se muestra primero, bloquea scroll) -->
+    <Portada />
 
-    <Itinerario />
-    <CodigoVestimenta />
-    <Restriccion />
-    <GaleriaFotos />
-    <Despedida />
-    <FloresAbajo />
+    <!-- CONTENIDO PRINCIPAL (oculto hasta que se presione el sobre) -->
+    <div id="contenido-principal">
+        <NombresFlores />
+        <Dedicatoria />
+        <!-- <Reproductor /> -->
+        <Bendicion />
+        <NombrePadres />
+        <Fecha />
+        <Contador />
+        <Foto2 />
+        <DireccionCeremonia />
+        <DireccionRecepcion />
+        <Itinerario />
+        <Foto4 />
+        <!-- <Reservas numeroPases={1} /> -->
+        <!-- <SugerenciaRegalo /> -->
+        <CodigoVestimenta />
+        <Restriccion />
+        <Hoteles />
+        <!-- <Galeria /> -->
+        <Confirmar />
+        <DespedidaDedicatoria />
+        <Foto3 />
+        <Des />
+    </div>
 </Layout>

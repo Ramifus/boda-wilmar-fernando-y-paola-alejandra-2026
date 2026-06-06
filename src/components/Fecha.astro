@@ -1,94 +1,151 @@
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- 📅 COMPONENTE FECHA - FECHA DEL EVENTO DE BODA             -->
-<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════════════════════ --><!-- 📅 COMPONENTE FECHA - FECHA DEL EVENTO DE BODA             --><!-- ═══════════════════════════════════════════════════════════ -->
+<section class="relative w-full py-2 md:py-10 px-4">
+  <!-- ═════════════════════════════════════════════════════════════ -->
+  <!-- 🌸 HOJAS DECORATIVAS - Pegadas a los bordes de la pantalla    -->
+  <!-- ═════════════════════════════════════════════════════════════ -->
 
-<section class="py-8 px-4">
+  <!-- ═══ PRIMERA CAPA (ABAJO): Hojas Doradas ═══ -->
+
+  <!-- Hoja dorada izquierda -->
+  <img
+    src="/imagenes/hojadorada.png"
+    alt="hoja dorada"
+    class="absolute left-0 top-1/2 -translate-y-1/2 w-18 lg:w-28 h-18 md:w-20 md:h-20 opacity-0 pointer-events-none z-10"
+    id="hoja-dorada-fecha-izq"
+  />
+
+  <!-- Hoja dorada derecha (volteada horizontalmente) -->
+  <img
+    src="/imagenes/hojadorada.png"
+    alt="hoja dorada"
+    class="absolute right-0 top-1/2 -translate-y-1/2 w-18 lg:w-28 h-18 md:w-20 md:h-20 opacity-0 pointer-events-none z-10 scale-x-[-1]"
+    id="hoja-dorada-fecha-der"
+  />
+
+  <!-- ═══ SEGUNDA CAPA (ENCIMA): Flores Laterales ═══ -->
+
+  <!-- Hoja lateral izquierda -->
+  <img
+    src="/imagenes/florlateral.png"
+    alt="Hoja izquierda"
+    class="absolute left-0 top-1/2 -translate-y-1/2 w-18 lg:w-28 h-18 lg:h-28 md:w-20 md:h-20 opacity-0 pointer-events-none z-[11]"
+    id="hoja-fecha-izq"
+  />
+
+  <!-- Hoja lateral derecha (volteada horizontalmente) -->
+  <img
+    src="/imagenes/florlateral.png"
+    alt="Hoja derecha"
+    class="absolute right-0 top-1/2 -translate-y-1/2 w-18 lg:w-28 h-18 lg:h-28 md:w-20 md:h-20 opacity-0 pointer-events-none z-[11] scale-x-[-1]"
+    id="hoja-fecha-der"
+  />
+
+  <!-- CONTENEDOR PRINCIPAL -->
   <div class="max-w-2xl mx-auto text-center relative">
-    
-    <!-- 🍃 HOJA IZQUIERDA - PEGADA AL BORDE -->
-    <div class="absolute left-0 top-1/2 -translate-y-1/3 w-16 pointer-events-none -ml-6 sm:-ml-7 md:-ml-8" id="hoja-fecha-izq">
-      <img
-        src="/imagenes/Hojas.webp"
-        alt="Hoja izquierda"
-        class="w-full h-auto object-contain transform -scale-x-100"
-      />
-    </div>
+    <!-- 🕊️ PALOMAS CON ANILLOS - VUELAN DESDE LOS COSTADOS AL CENTRO -->
+    <div
+      class="flex justify-center items-center mb-4 md:mb-20 relative h-16"
+      id="palomas-container"
+    >
+      <!-- Paloma izquierda -->
+      <div
+        class="absolute left-1/2"
+        id="paloma-izq"
+        style="transform: translateX(-100%);"
+      >
+        <img
+          src="/imagenes/paloma.png"
+          alt="Paloma izquierda"
+          class="w-16 md:w-32 lg:w-36 h-auto"
+        />
+      </div>
 
-    <!-- 🍃 HOJA DERECHA - PEGADA AL BORDE -->
-    <div class="absolute right-0 top-1/2 -translate-y-1/3 w-16 pointer-events-none -mr-6 sm:-mr-7 md:-mr-8" id="hoja-fecha-der">
-      <img
-        src="/imagenes/Hojas.webp"
-        alt="Hoja derecha"
-        class="w-full h-auto object-contain"
-      />
-    </div>
-    
-    <!-- 🌸 Flores centrales arriba -->
-    <div class="flex justify-center mb-6" id="flores-fecha">
-      <img
-        src="/imagenes/Separadores.webp"
-        alt="Flores decorativas"
-        class="w-40 md:w-48 lg:w-56 h-auto"
-      />
+      <!-- Paloma derecha (volteada) -->
+      <div
+        class="absolute right-1/2"
+        id="paloma-der"
+        style="transform: translateX(100%) scaleX(-1);"
+      >
+        <img
+          src="/imagenes/paloma.png"
+          alt="Paloma derecha"
+          class="w-16 md:w-32 lg:w-36 h-auto"
+        />
+      </div>
     </div>
 
     <!-- 💍 Texto "Acompáñanos este día tan especial" -->
     <div class="mb-6" id="texto-invitacion-container">
       <div class="flex items-center justify-center px-4">
-        
         <!-- 📝 TEXTO CENTRAL -->
         <div id="texto-invitacion" class="flex-shrink-0">
-          <p class="font-great-vibes text-3xl sm:text-3xl md:text-4xl text-[#C9A961] leading-relaxed text-center">
+          <p
+            class="font-great-vibes text-3xl md:text-5xl lg:text-6xl text-[#9C7A2E] leading-[1.2] text-center"
+          >
             Acompáñanos este día<br />tan especial
           </p>
         </div>
-
       </div>
+    </div>
+
+    <!-- Año 2026 ARRIBA -->
+    <div class="mb-4 flex justify-center" id="anio-evento">
+      <p class="font-charm text-3xl md:text-4xl text-[#0F3D2E] font-bold">
+        2026
+      </p>
     </div>
 
     <!-- 📅 Fecha con líneas arriba y abajo -->
     <div class="relative max-w-md mx-auto" id="fecha-evento">
-      <div class="flex items-center justify-center gap-4 md:gap-6">
-        
+      <div class="flex items-center justify-center gap-4 md:gap-16">
         <!-- SÁBADO con líneas arriba y abajo -->
         <div class="flex flex-col items-center w-24 md:w-28">
-          <div class="w-full h-px bg-[#C9A961] mb-2"></div>
-          <span class="font-charm text-lg md:text-xl text-[#626a54] uppercase tracking-wider font-bold text-center">
+          <div class="w-full h-px bg-[#9C7A2E] mb-2"></div>
+          <span
+            class="font-charm text-lg md:text-3xl text-[#0F3D2E] uppercase tracking-wider font-bold text-center"
+          >
             SÁBADO
           </span>
-          <div class="w-full h-px bg-[#C9A961] mt-2"></div>
+          <div class="w-full h-px bg-[#9C7A2E] mt-2"></div>
         </div>
 
-        <!-- Número 19 - CENTRADO -->
-        <div class="flex items-center justify-center min-w-[80px] md:min-w-[100px]">
-          <span class="font-charm text-7xl md:text-8xl text-[#C9A961] font-bold">
+        <!-- Número 26 - CENTRADO -->
+        <div
+          class="flex items-center justify-center min-w-[80px] md:min-w-[100px]"
+        >
+          <span
+            class="font-charm text-7xl md:text-8xl text-[#9C7A2E] font-bold"
+          >
             19
           </span>
         </div>
 
-        <!-- ABRIL con líneas arriba y abajo -->
+        <!-- SEPTIEMBRE con líneas arriba y abajo -->
         <div class="flex flex-col items-center w-24 md:w-28">
-          <div class="w-full h-px bg-[#C9A961] mb-2"></div>
-          <span class="font-charm text-lg md:text-xl text-[#626a54] uppercase tracking-wider font-bold text-center">
+          <div class="w-full h-px bg-[#9C7A2E] mb-2"></div>
+          <span
+            class="font-charm text-lg md:text-3xl text-[#0F3D2E] uppercase tracking-wider font-bold text-center"
+          >
             DICIEMBRE
           </span>
-          <div class="w-full h-px bg-[#C9A961] mt-2"></div>
+          <div class="w-full h-px bg-[#9C7A2E] mt-2"></div>
         </div>
-      </div>
-
-      <!-- Año 2026 -->
-      <div class="mt-4 flex justify-center" id="anio-evento">
-        <p class="font-charm text-3xl md:text-4xl text-[#626a54] font-bold">
-          2026
-        </p>
       </div>
     </div>
 
+    <!-- HORA DEBAJO -->
+    <div class="mt-6 flex justify-center" id="hora-evento">
+      <p
+        class="font-charm text-2xl md:text-3xl lg:text-4xl text-[#0F3D2E] font-bold"
+      >
+        14:30 Hrs.
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- 🎬 ANIMACIONES CON GSAP                                     -->
+<!-- 🎬 ANIMACIONES CON GSAP - ANIMACIÓN DE ENTRADA MEJORADA     -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <script>
   import { gsap } from "gsap";
@@ -100,105 +157,419 @@
     document.addEventListener("DOMContentLoaded", () => {
       console.log("📅 Iniciando animaciones de fecha...");
 
-      // 🎯 ESTADO INICIAL - Todo oculto
-      gsap.set("#flores-fecha", { opacity: 0, scale: 0.8 });
-      gsap.set("#hoja-fecha-izq", { opacity: 0, x: -30 });
-      gsap.set("#hoja-fecha-der", { opacity: 0, x: 30 });
-      gsap.set("#texto-invitacion", { opacity: 0, scale: 0.9 });
-      gsap.set("#fecha-evento", { opacity: 0, scale: 0.9 });
-      gsap.set("#anio-evento", { opacity: 0, scale: 0.9 });
+      // ⚙️ CONFIGURACIÓN DE SEPARACIÓN RESPONSIVE
+      const SEPARACION = {
+        mobile: 70,
+        md: 130,
+        lg: 170,
+        xl: 190,
+      };
 
-      // ✨ ANIMACIÓN SIMULTÁNEA - TODO AL MISMO TIEMPO (SIN MOVIMIENTO CONTINUO)
+      const getSeparacion = () => {
+        const width = window.innerWidth;
+        if (width >= 1280) return SEPARACION.xl;
+        if (width >= 1024) return SEPARACION.lg;
+        if (width >= 768) return SEPARACION.md;
+        return SEPARACION.mobile;
+      };
+
+      let separacionActual = getSeparacion();
+
+      // 🎯 ESTADO INICIAL - SUAVE Y ELEGANTE
+      gsap.set("#paloma-izq", { opacity: 0, x: -250, y: -20 });
+      gsap.set("#paloma-der", { opacity: 0, x: 250, y: -20 });
+
+      // Flores laterales (ENCIMA)
+      gsap.set("#hoja-fecha-izq", {
+        opacity: 0,
+        x: -40,
+        y: 20,
+        rotation: -15,
+        scale: 0.8,
+      });
+      gsap.set("#hoja-fecha-der", {
+        opacity: 0,
+        x: 40,
+        y: 20,
+        rotation: 15,
+        scaleX: -0.8,
+        scaleY: 0.8,
+      });
+
+      // Hojas doradas (ABAJO)
+      gsap.set("#hoja-dorada-fecha-izq", {
+        opacity: 0,
+        x: -50,
+        y: 25,
+        rotation: -20,
+        scale: 0.7,
+      });
+      gsap.set("#hoja-dorada-fecha-der", {
+        opacity: 0,
+        x: 50,
+        y: 25,
+        rotation: 20,
+        scaleX: -0.7,
+        scaleY: 0.7,
+      });
+
+      gsap.set("#texto-invitacion", { opacity: 0, x: -30, y: 15 });
+      gsap.set("#anio-evento", { opacity: 0, x: 30, y: 15 });
+      gsap.set("#fecha-evento", { opacity: 0, x: -30, y: 15 });
+      gsap.set("#hora-evento", { opacity: 0, x: 30, y: 15 });
+
+      // ✨ ANIMACIÓN DE ENTRADA MEJORADA
       ScrollTrigger.create({
-        trigger: "#flores-fecha",
-        start: "top 85%",
+        trigger: "#palomas-container",
+        start: "top bottom",
         end: "top 20%",
-        
+
         onEnter: () => {
+          separacionActual = getSeparacion();
           const tl = gsap.timeline();
 
-          // TODO aparece al mismo tiempo
-          tl.to("#flores-fecha, #hoja-fecha-izq, #hoja-fecha-der, #texto-invitacion, #fecha-evento, #anio-evento", {
-            opacity: 1,
-            duration: 1,
-            ease: "power2.out",
-          })
-          // Animaciones individuales (simultáneas)
-          .to("#flores-fecha", {
-            scale: 1,
-            duration: 1,
-            ease: "back.out(1.4)",
-          }, "<")
-          .to("#hoja-fecha-izq", {
-            x: 0,
-            duration: 1,
-            ease: "power2.out",
-          }, "<")
-          .to("#hoja-fecha-der", {
-            x: 0,
-            duration: 1,
-            ease: "power2.out",
-          }, "<")
-          .to("#texto-invitacion, #fecha-evento, #anio-evento", {
-            scale: 1,
-            duration: 1,
-            ease: "back.out(1.2)",
-          }, "<");
+          // 1️⃣ PALOMAS - Vuelo suave y delicado
+          tl.to(
+            "#paloma-izq, #paloma-der",
+            {
+              opacity: 1,
+              duration: 2,
+              ease: "power1.inOut",
+            },
+            0,
+          )
+            .to(
+              "#paloma-izq",
+              {
+                x: -separacionActual,
+                y: 0,
+                duration: 3,
+                ease: "power2.inOut",
+              },
+              0,
+            )
+            .to(
+              "#paloma-der",
+              {
+                x: separacionActual,
+                y: 0,
+                duration: 3,
+                ease: "power2.inOut",
+              },
+              0,
+            )
+            // 2️⃣ TEXTO INVITACIÓN - Desliza desde la izquierda
+            .to(
+              "#texto-invitacion",
+              {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                duration: 1.2,
+                ease: "power2.out",
+              },
+              0.8,
+            )
+            // 3️⃣ AÑO - Desliza desde la derecha
+            .to(
+              "#anio-evento",
+              {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                duration: 1.2,
+                ease: "power2.out",
+              },
+              1.1,
+            )
+            // 4️⃣ FECHA - Desliza desde la izquierda
+            .to(
+              "#fecha-evento",
+              {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                duration: 1.2,
+                ease: "power2.out",
+              },
+              1.4,
+            )
+            // 5️⃣ HORA - Desliza desde la derecha
+            .to(
+              "#hora-evento",
+              {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                duration: 1.2,
+                ease: "power2.out",
+              },
+              1.7,
+            )
+            // 6️⃣ FLORES LATERALES - Aparición suave como pétalos
+            .to(
+              "#hoja-fecha-izq",
+              {
+                opacity: 0.8,
+                x: 0,
+                y: 0,
+                rotation: 0,
+                scale: 1,
+                duration: 1.8,
+                ease: "power1.out",
+              },
+              2.0,
+            )
+            .to(
+              "#hoja-fecha-der",
+              {
+                opacity: 0.8,
+                x: 0,
+                y: 0,
+                rotation: 0,
+                scaleX: -1,
+                scaleY: 1,
+                duration: 1.8,
+                ease: "power1.out",
+              },
+              2.1,
+            )
+            // 7️⃣ HOJAS DORADAS - Entrada suave y elegante
+            .to(
+              "#hoja-dorada-fecha-izq",
+              {
+                opacity: 0.9,
+                x: 0,
+                y: 0,
+                rotation: 0,
+                scale: 1,
+                duration: 2,
+                ease: "power1.out",
+              },
+              2.3,
+            )
+            .to(
+              "#hoja-dorada-fecha-der",
+              {
+                opacity: 0.9,
+                x: 0,
+                y: 0,
+                rotation: 0,
+                scaleX: -1,
+                scaleY: 1,
+                duration: 2,
+                ease: "power1.out",
+              },
+              2.4,
+            );
 
-          // ❌ ELIMINADO: Movimiento suave de hojas (subir y bajar)
+          // ═══════════════════════════════════════════════════
+          // 🍃 MOVIMIENTOS NATURALES SUAVES
+          // ═══════════════════════════════════════════════════
+
+          // Flor lateral izquierda - Movimiento suave
+          gsap.to("#hoja-fecha-izq", {
+            y: -10,
+            x: -5,
+            rotation: -8,
+            duration: 3.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 3.3,
+          });
+
+          // Flor lateral derecha
+          gsap.to("#hoja-fecha-der", {
+            y: -8,
+            x: 5,
+            rotation: 8,
+            duration: 3.8,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 3.5,
+          });
+
+          // Hoja dorada izquierda - Balanceo suave
+          gsap.to("#hoja-dorada-fecha-izq", {
+            y: -12,
+            rotation: -10,
+            duration: 4,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 3.8,
+          });
+
+          // Hoja dorada derecha
+          gsap.to("#hoja-dorada-fecha-der", {
+            y: -11,
+            rotation: 10,
+            duration: 4.3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 4,
+          });
+
+          // ═══ RESPIRACIÓN MÁS SUTIL (SCALE) ═══
+          gsap.to("#hoja-dorada-fecha-izq", {
+            scale: 0.85,
+            duration: 4.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 4.2,
+          });
+
+          gsap.to("#hoja-dorada-fecha-der", {
+            scaleX: -0.85,
+            scaleY: 0.85,
+            duration: 5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 4.5,
+          });
+
+          // ═══ EFECTO BRISA MÁS SUTIL ═══
+          gsap.to("#hoja-fecha-izq", {
+            x: -8,
+            duration: 5.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 4.8,
+          });
+
+          gsap.to("#hoja-fecha-der", {
+            x: 8,
+            duration: 6,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 5,
+          });
         },
-        
+
         onLeaveBack: () => {
-          // Resetear todo al salir por arriba - SIMULTÁNEO
+          // Detener TODAS las animaciones continuas
+          gsap.killTweensOf("#hoja-fecha-izq");
+          gsap.killTweensOf("#hoja-fecha-der");
+          gsap.killTweensOf("#hoja-dorada-fecha-izq");
+          gsap.killTweensOf("#hoja-dorada-fecha-der");
+
           const tl = gsap.timeline();
-          
-          tl.to("#flores-fecha, #hoja-fecha-izq, #hoja-fecha-der, #texto-invitacion, #fecha-evento, #anio-evento", {
-            opacity: 0,
-            duration: 0.5,
-            ease: "power2.in",
-          })
-          .to("#flores-fecha", {
-            scale: 0.8,
-            duration: 0.5,
-            ease: "power2.in",
-          }, "<")
-          .to("#hoja-fecha-izq", {
-            x: -30,
-            duration: 0.5,
-            ease: "power2.in",
-          }, "<")
-          .to("#hoja-fecha-der", {
-            x: 30,
-            duration: 0.5,
-            ease: "power2.in",
-          }, "<")
-          .to("#texto-invitacion, #fecha-evento, #anio-evento", {
-            scale: 0.9,
-            duration: 0.5,
-            ease: "power2.in",
-          }, "<");
+
+          tl.to(
+            "#paloma-izq, #paloma-der, #hoja-fecha-izq, #hoja-fecha-der, #hoja-dorada-fecha-izq, #hoja-dorada-fecha-der, #texto-invitacion, #anio-evento, #fecha-evento, #hora-evento",
+            {
+              opacity: 0,
+              duration: 0.5,
+              ease: "power2.in",
+            },
+          )
+            .to(
+              "#paloma-izq",
+              { x: -250, y: -20, duration: 0.6, ease: "power2.in" },
+              "<",
+            )
+            .to(
+              "#paloma-der",
+              { x: 250, y: -20, duration: 0.6, ease: "power2.in" },
+              "<",
+            )
+            .to(
+              "#texto-invitacion",
+              { x: -30, y: 15, duration: 0.6, ease: "power2.in" },
+              "<",
+            )
+            .to(
+              "#anio-evento",
+              { x: 30, y: 15, duration: 0.6, ease: "power2.in" },
+              "<",
+            )
+            .to(
+              "#fecha-evento",
+              { x: -30, y: 15, duration: 0.6, ease: "power2.in" },
+              "<",
+            )
+            .to(
+              "#hora-evento",
+              { x: 30, y: 15, duration: 0.6, ease: "power2.in" },
+              "<",
+            )
+            // Mover flores laterales hacia afuera suavemente
+            .to(
+              "#hoja-fecha-izq",
+              {
+                x: -40,
+                y: 20,
+                rotation: -15,
+                scale: 0.8,
+                duration: 0.6,
+                ease: "power2.in",
+              },
+              "<",
+            )
+            .to(
+              "#hoja-fecha-der",
+              {
+                x: 40,
+                y: 20,
+                rotation: 15,
+                scaleX: -0.8,
+                scaleY: 0.8,
+                duration: 0.6,
+                ease: "power2.in",
+              },
+              "<",
+            )
+            // Mover hojas doradas hacia afuera suavemente
+            .to(
+              "#hoja-dorada-fecha-izq",
+              {
+                x: -50,
+                y: 25,
+                rotation: -20,
+                scale: 0.7,
+                duration: 0.6,
+                ease: "power2.in",
+              },
+              "<",
+            )
+            .to(
+              "#hoja-dorada-fecha-der",
+              {
+                x: 50,
+                y: 25,
+                rotation: 20,
+                scaleX: -0.7,
+                scaleY: 0.7,
+                duration: 0.6,
+                ease: "power2.in",
+              },
+              "<",
+            );
         },
       });
 
-      console.log("✨ Animaciones de fecha listas (sin movimiento continuo)!");
+      // 📱 RESIZE
+      let resizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          const nuevaSeparacion = getSeparacion();
+          if (nuevaSeparacion !== separacionActual) {
+            separacionActual = nuevaSeparacion;
+            gsap.to("#paloma-izq", { x: -separacionActual, duration: 0.3 });
+            gsap.to("#paloma-der", { x: separacionActual, duration: 0.3 });
+          }
+        }, 150);
+      });
+
+      console.log("✨ Animaciones listas!");
     });
   }
 </script>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- 🎨 ESTILOS CSS                                              -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<style>
-  /* Mejoras visuales */
-  #fecha-evento {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-
-  /* Ajustes responsivos */
-  @media (max-width: 640px) {
-    section {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-</style>
