@@ -37,7 +37,7 @@
           <p
             class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl"
           >
-            Ivette angelica Márquez Lopez (+)
+            Angélica Ibeth Marquéz López (+)
           </p>
         </div>
       </div>
@@ -74,10 +74,14 @@
           Padrinos de religión
         </h4>
         <div class="space-y-2">
-          <p class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl">
+          <p
+            class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl"
+          >
             José Luis Dávila Cortez
           </p>
-          <p class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl">
+          <p
+            class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl"
+          >
             Martha Melean de Dávila
           </p>
         </div>
@@ -91,28 +95,63 @@
           Padrinos de civil
         </h4>
         <div class="space-y-2">
-          <p class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl">
+          <p
+            class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl"
+          >
             Juan Manuel Campos Pasquier
           </p>
-          <p class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl">
+          <p
+            class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl"
+          >
             Ivana Rossi
           </p>
         </div>
       </div>
 
+      <!-- Padrinos de anillos -->
+      <div
+        class="space-y-4 opacity-0 md:col-span-2 md:flex md:flex-col md:items-center"
+        id="padrinos-anillos"
+      >
+        <h4
+          class="text-[#9C7A2E] tracking-[0.2em] uppercase text-lg md:text-2xl lg:text-2xl xl:text-3xl font-semibold"
+        >
+          Padrinos de anillos
+        </h4>
+        <div class="space-y-2">
+          <p
+            class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl"
+          >
+            Gerson Leonardo Dávila Leytón
+          </p>
+          <p
+            class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl"
+          >
+            Sonia Ruth Torrejón Choque
+          </p>
+        </div>
+      </div>
+
       <!-- Padrinos de lazo y arras -->
-      <div class="space-y-4 opacity-0 md:col-span-2 md:flex md:flex-col md:items-center" id="padrinos-lazo">
+      <div
+        class="space-y-4 opacity-0 md:col-span-2 md:flex md:flex-col md:items-center"
+        id="padrinos-lazo"
+      >
         <h4
           class="text-[#9C7A2E] tracking-[0.2em] uppercase text-lg md:text-2xl lg:text-2xl xl:text-3xl font-semibold"
         >
           Padrinos de lazo y arras
         </h4>
         <div class="space-y-2">
-          <p class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl">
-            Marco Zilvetty
+          <p
+            class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl"
+          >
+            Marcos Zilvetti Torres
           </p>
-          <p class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl">
-            Xochilt Yessenia Herbas Pasquier
+          <p
+            class="font-charm text-[#0F3D2E] text-xl md:text-3xl lg:text-3xl xl:text-4xl"
+          >
+            Xochilt Herbas Pasquier
           </p>
         </div>
       </div>
@@ -135,6 +174,7 @@
     gsap.set("#padrinos-religioso", { opacity: 0, x: -30, y: 15 });
     gsap.set("#padrinos-civil", { opacity: 0, x: 30, y: 15 });
     gsap.set("#padrinos-lazo", { opacity: 0, y: 30 });
+    gsap.set("#padrinos-anillos", { opacity: 0, y: 30 });
 
     // Flores laterales (ENCIMA)
     gsap.set("#hoja-familia-izq", {
@@ -227,7 +267,18 @@
             },
             0.8,
           )
-          // 5️⃣ Padrinos de lazo y arras - Aparece desde abajo
+          // 5️⃣ Padrinos de anillos - Aparece desde abajo
+          .to(
+            "#padrinos-anillos",
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1.2,
+              ease: "power2.out",
+            },
+            1.0,
+          )
+          // 6️⃣ Padrinos de lazo y arras - Aparece desde abajo
           .to(
             "#padrinos-lazo",
             {
@@ -236,7 +287,7 @@
               duration: 1.2,
               ease: "power2.out",
             },
-            1.0,
+            1.2,
           )
           // 4️⃣ FLORES LATERALES (ENCIMA) - Caída suave
           .to(
@@ -395,7 +446,7 @@
         const tl = gsap.timeline();
 
         tl.to(
-          "#padres-novio, #padres-novia, #padrinos-religioso, #padrinos-civil, #padrinos-lazo, #hoja-familia-izq, #hoja-familia-der, #hoja-dorada-familia-izq, #hoja-dorada-familia-der",
+          "#padres-novio, #padres-novia, #padrinos-religioso, #padrinos-civil, #padrinos-lazo, #padrinos-anillos, #hoja-familia-izq, #hoja-familia-der, #hoja-dorada-familia-izq, #hoja-dorada-familia-der",
           {
             opacity: 0,
             duration: 0.6,
@@ -424,6 +475,11 @@
           )
           .to(
             "#padrinos-lazo",
+            { y: 30, duration: 0.6, ease: "power2.in" },
+            "<",
+          )
+          .to(
+            "#padrinos-anillos",
             { y: 30, duration: 0.6, ease: "power2.in" },
             "<",
           )

@@ -153,17 +153,10 @@ const { numeroPases = 1, nombreInvitado = "" } = Astro.props;
                 >
                     {
                         numeroPases === 1
-                            ? "Tu asistencia es invaluable para nosotros"
+                            ? "Tu presencia es muy importante para nosotros."
                             : `Esperamos contar con la presencia de ${numeroPases === 2 ? "ambos" : `los ${numeroPases}`}`
                     }
                 </p>
-
-                <!-- Nota amable sobre los pases -->
-                <div class="mt-4 mb-2 px-4 py-3 rounded-2xl border border-[#9C7A2E]/20 bg-[#9C7A2E]/5">
-                    <p class="text-[#0F3D2E]/70 text-sm md:text-base leading-relaxed italic">
-                        Por favor respeta el número de pases indicado. ¡Mil gracias! 🤍
-                    </p>
-                </div>
 
                 <!-- Iconos decorativos de personas -->
                 <div class="flex justify-center gap-3 mt-6">

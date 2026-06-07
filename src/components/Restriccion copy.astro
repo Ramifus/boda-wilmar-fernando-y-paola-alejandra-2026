@@ -1,8 +1,8 @@
 ---
-// CodigoVestimenta.astro
+// SoloAdultos.astro
 ---
 
-<section class="relative w-full py-4 px-6 overflow-hidden">
+<section class="relative w-full py-12 px-6 overflow-hidden">
     <!-- Partículas flotantes de fondo -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
         <div
@@ -29,7 +29,7 @@
 
     <div
         class="max-w-sm lg:max-w-3xl mx-auto relative z-10"
-        id="contenedor-vestimenta"
+        id="contenedor-adultos"
     >
         <!-- MARCO PRINCIPAL CON EFECTO GLASSMORPHISM -->
         <div
@@ -45,60 +45,41 @@
                 style="animation-delay: 1s;"
             >
             </div>
-
             <!-- CONTENIDO -->
-            <div class="text-center relative" id="tarjeta-vestimenta">
-                <!-- Icono de vestimenta -->
+            <div class="text-center relative" id="tarjeta-adultos">
+                <!-- Icono de copas -->
                 <div class="flex justify-center mb-6">
-                    <div class="w-16 h-16 relative vestimenta-icon-container">
+                    <div class="w-16 h-16 relative adultos-icon-container">
                         <div
                             class="absolute inset-0 bg-gradient-to-br from-[#9C7A2E]/20 to-[#9C7A2E]/5 rounded-full blur-xl animate-pulse-slow"
                         >
                         </div>
-
                         <img
-                            src="/iconos/vestido-de-novia.png"
-                            alt="Icono de vestimenta"
-                            class="w-full h-full object-contain relative z-10 transform transition-transform duration-300 hover:scale-110 verde-filter"
+                            src="/iconos/restriccion.png"
+                            alt="Icono de copas"
+                            class="w-full h-full object-contain relative z-10
+             transform transition-transform duration-300 hover:scale-110 verde-filter"
                         />
                     </div>
                 </div>
-
                 <!-- Título principal -->
                 <h3
-                    class="text-[#9C7A2E] tracking-[0.3em] uppercase text-lg md:text-2xl mb-3 relative inline-block"
+                    class="text-[#9C7A2E] tracking-[0.3em] uppercase text-xl md:text-2xl mb-2 relative inline-block"
                 >
-                    Código de Vestimenta
+                    Solo Adultos
                 </h3>
-
-                <!-- Línea decorativa -->
-                <div class="flex items-center justify-center gap-2 mb-6">
-                    <div
-                        class="w-12 h-px bg-gradient-to-r from-transparent to-[#0F3D2E]/30"
-                    >
-                    </div>
-                    <div class="w-2 h-2 rounded-full bg-[#0F3D2E]/40"></div>
-                    <div
-                        class="w-12 h-px bg-gradient-to-l from-transparent to-[#0F3D2E]/30"
-                    >
-                    </div>
+                <!-- Punto decorativo -->
+                <div class="flex justify-center mb-6">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#0F3D2E]/40"></div>
                 </div>
-
-                <!-- FORMAL destacado -->
-                <div class="rounded-2xl px-6 border border-[#0F3D2E]/10">
-                    <h4
-                        class="text-[#0F3D2E] tracking-[0.25em] uppercase text-lg md:text-2xl"
-                    >
-                        Formal
-                    </h4>
-                </div>
-
                 <!-- Texto descriptivo -->
-                <!-- <p
+                <p
                     class="font-charm text-[#0F3D2E] text-lg md:text-2xl lg:text-3xl leading-relaxed"
                 >
-                    Queremos que disfrutes de esta celebración de gala
-                </p> -->
+                    Con todo el cariño del mundo, les comunicamos que esta
+                    celebración es exclusivamente para adultos. ¡Los esperamos
+                    para disfrutar juntos esta noche tan especial!
+                </p>
             </div>
         </div>
     </div>
@@ -111,32 +92,32 @@
     <img
         src="/imagenes/hojadorada.png"
         alt="hoja dorada"
-        class="absolute left-0 top-8 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-20"
-        id="hoja-vestimenta-left"
+        class="absolute left-0 top-16 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-20"
+        id="hoja-adultos-left"
     />
 
     <!-- Hoja dorada derecha (CAPA INFERIOR) -->
     <img
         src="/imagenes/hojadorada.png"
         alt="hoja dorada"
-        class="absolute right-0 top-8 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-20 scale-x-[-1]"
-        id="hoja-vestimenta-right"
+        class="absolute right-0 top-16 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-20 scale-x-[-1]"
+        id="hoja-adultos-right"
     />
 
     <!-- Flor lateral izquierda (CAPA SUPERIOR) -->
     <img
         src="/imagenes/florlateral.png"
         alt="hojas"
-        class="absolute left-0 top-12 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-30"
-        id="flor-vestimenta-left"
+        class="absolute left-0 top-20 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-30"
+        id="flor-adultos-left"
     />
 
     <!-- Flor lateral derecha (CAPA SUPERIOR) -->
     <img
         src="/imagenes/florlateral.png"
         alt="hojas"
-        class="absolute right-0 top-12 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-30 scale-x-[-1]"
-        id="flor-vestimenta-right"
+        class="absolute right-0 top-20 md:top-24 w-18 h-18 md:w-28 md:h-28 opacity-0 pointer-events-none z-30 scale-x-[-1]"
+        id="flor-adultos-right"
     />
 </section>
 
@@ -154,7 +135,6 @@
         animation: flotar 6s ease-in-out infinite;
         opacity: 0.4;
     }
-
     @keyframes flotar {
         0%,
         100% {
@@ -166,7 +146,6 @@
             opacity: 0.6;
         }
     }
-
     /* Animación de pulso lento */
     @keyframes pulse-slow {
         0%,
@@ -179,16 +158,13 @@
             transform: scale(1.05);
         }
     }
-
     .animate-pulse-slow {
         animation: pulse-slow 4s ease-in-out infinite;
     }
-
-    /* Animación suave del icono de vestimenta */
-    .vestimenta-icon-container:hover svg {
+    /* Animación suave del icono */
+    .adultos-icon-container:hover svg {
         animation: bounce-gentle 0.6s ease;
     }
-
     @keyframes bounce-gentle {
         0%,
         100% {
@@ -198,7 +174,6 @@
             transform: translateY(-8px) scale(1.05);
         }
     }
-
     /* Filtro que convierte imágenes PNG negras al color #0F3D2E */
     .verde-filter {
         filter: brightness(0) saturate(100%) invert(18%) sepia(42%)
@@ -212,28 +187,27 @@
 <script>
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
-
     gsap.registerPlugin(ScrollTrigger);
 
-    const initVestimenta = () => {
-        console.log("👔 Iniciando sección de código de vestimenta...");
+    const initAdultos = () => {
+        console.log("🍾 Iniciando sección Solo Adultos...");
 
         // ═══ ESTADO INICIAL ═══
-        gsap.set("#contenedor-vestimenta", {
+        gsap.set("#contenedor-adultos", {
             opacity: 0,
             y: 50,
             scale: 0.95,
         });
 
         // Flores laterales - Estado inicial
-        gsap.set("#flor-vestimenta-left", {
+        gsap.set("#flor-adultos-left", {
             opacity: 0,
             x: -40,
             rotation: -8,
             scale: 0.9,
         });
 
-        gsap.set("#flor-vestimenta-right", {
+        gsap.set("#flor-adultos-right", {
             opacity: 0,
             x: 40,
             rotation: 8,
@@ -242,14 +216,14 @@
         });
 
         // Hojas doradas - Estado inicial
-        gsap.set("#hoja-vestimenta-left", {
+        gsap.set("#hoja-adultos-left", {
             opacity: 0,
             scale: 0,
             rotation: -6,
             transformOrigin: "bottom center",
         });
 
-        gsap.set("#hoja-vestimenta-right", {
+        gsap.set("#hoja-adultos-right", {
             opacity: 0,
             scaleX: 0,
             scaleY: 0,
@@ -257,11 +231,11 @@
             transformOrigin: "bottom center",
         });
 
-        gsap.set("#tarjeta-vestimenta", { opacity: 0, y: 20 });
+        gsap.set("#tarjeta-adultos", { opacity: 0, y: 20 });
 
         // ═══ ANIMACIÓN PRINCIPAL ═══
         ScrollTrigger.create({
-            trigger: "#contenedor-vestimenta",
+            trigger: "#contenedor-adultos",
             start: "top 75%",
             end: "top 20%",
 
@@ -270,7 +244,7 @@
 
                 // Card aparece
                 tl.to(
-                    "#contenedor-vestimenta",
+                    "#contenedor-adultos",
                     {
                         opacity: 1,
                         y: 0,
@@ -283,7 +257,7 @@
 
                     // 🌸 FLORES LATERALES - Entrada suave
                     .to(
-                        "#flor-vestimenta-left",
+                        "#flor-adultos-left",
                         {
                             opacity: 0.75,
                             x: 0,
@@ -296,7 +270,7 @@
                     )
 
                     .to(
-                        "#flor-vestimenta-right",
+                        "#flor-adultos-right",
                         {
                             opacity: 0.75,
                             x: 0,
@@ -311,7 +285,7 @@
 
                     // 🍃 HOJAS DORADAS - Crecimiento natural
                     .to(
-                        "#hoja-vestimenta-left",
+                        "#hoja-adultos-left",
                         {
                             opacity: 0.7,
                             scale: 0.9,
@@ -323,7 +297,7 @@
                     )
 
                     .to(
-                        "#hoja-vestimenta-right",
+                        "#hoja-adultos-right",
                         {
                             opacity: 0.7,
                             scaleX: -0.9,
@@ -337,7 +311,7 @@
 
                     // Contenido del card
                     .to(
-                        "#tarjeta-vestimenta",
+                        "#tarjeta-adultos",
                         {
                             opacity: 1,
                             y: 0,
@@ -352,7 +326,7 @@
                 // ═══════════════════════════════════════════════════
 
                 // Flor izquierda - Movimiento más amplio
-                gsap.to("#flor-vestimenta-left", {
+                gsap.to("#flor-adultos-left", {
                     y: -15,
                     x: -8,
                     rotation: -12,
@@ -364,7 +338,7 @@
                 });
 
                 // Flor derecha - Movimiento más amplio inverso
-                gsap.to("#flor-vestimenta-right", {
+                gsap.to("#flor-adultos-right", {
                     y: -12,
                     x: 8,
                     rotation: 12,
@@ -376,7 +350,7 @@
                 });
 
                 // Hoja izquierda - Balanceo más pronunciado
-                gsap.to("#hoja-vestimenta-left", {
+                gsap.to("#hoja-adultos-left", {
                     y: -18,
                     rotation: -15,
                     duration: 3.5,
@@ -387,7 +361,7 @@
                 });
 
                 // Hoja derecha - Balanceo más pronunciado
-                gsap.to("#hoja-vestimenta-right", {
+                gsap.to("#hoja-adultos-right", {
                     y: -16,
                     rotation: 15,
                     duration: 3.8,
@@ -398,7 +372,7 @@
                 });
 
                 // ═══ RESPIRACIÓN MÁS VISIBLE ═══
-                gsap.to("#hoja-vestimenta-left", {
+                gsap.to("#hoja-adultos-left", {
                     scale: 0.8,
                     duration: 4,
                     repeat: -1,
@@ -407,7 +381,7 @@
                     delay: 4,
                 });
 
-                gsap.to("#hoja-vestimenta-right", {
+                gsap.to("#hoja-adultos-right", {
                     scaleX: -0.8,
                     scaleY: 0.8,
                     duration: 4.5,
@@ -418,7 +392,7 @@
                 });
 
                 // ═══ MOVIMIENTO HORIZONTAL ADICIONAL (Efecto brisa) ═══
-                gsap.to("#flor-vestimenta-left", {
+                gsap.to("#flor-adultos-left", {
                     x: -12,
                     duration: 5,
                     repeat: -1,
@@ -427,7 +401,7 @@
                     delay: 4.5,
                 });
 
-                gsap.to("#flor-vestimenta-right", {
+                gsap.to("#flor-adultos-right", {
                     x: 12,
                     duration: 5.5,
                     repeat: -1,
@@ -439,14 +413,14 @@
 
             onLeaveBack: () => {
                 // Resetear todas las animaciones continuas
-                gsap.killTweensOf("#flor-vestimenta-left");
-                gsap.killTweensOf("#flor-vestimenta-right");
-                gsap.killTweensOf("#hoja-vestimenta-left");
-                gsap.killTweensOf("#hoja-vestimenta-right");
+                gsap.killTweensOf("#flor-adultos-left");
+                gsap.killTweensOf("#flor-adultos-right");
+                gsap.killTweensOf("#hoja-adultos-left");
+                gsap.killTweensOf("#hoja-adultos-right");
 
                 const tl = gsap.timeline();
 
-                tl.to("#tarjeta-vestimenta", {
+                tl.to("#tarjeta-adultos", {
                     opacity: 0,
                     y: 20,
                     duration: 0.3,
@@ -454,7 +428,7 @@
                 })
 
                     .to(
-                        "#contenedor-vestimenta",
+                        "#contenedor-adultos",
                         {
                             opacity: 0,
                             y: 50,
@@ -466,7 +440,7 @@
                     )
 
                     .to(
-                        "#flor-vestimenta-left",
+                        "#flor-adultos-left",
                         {
                             opacity: 0,
                             x: -40,
@@ -477,7 +451,7 @@
                     )
 
                     .to(
-                        "#flor-vestimenta-right",
+                        "#flor-adultos-right",
                         {
                             opacity: 0,
                             x: 40,
@@ -488,7 +462,7 @@
                     )
 
                     .to(
-                        "#hoja-vestimenta-left, #hoja-vestimenta-right",
+                        "#hoja-adultos-left, #hoja-adultos-right",
                         {
                             opacity: 0,
                             scale: 0,
@@ -498,25 +472,25 @@
                         "<",
                     )
 
-                    .set("#flor-vestimenta-left", {
+                    .set("#flor-adultos-left", {
                         rotation: -8,
                         scale: 0.9,
                         x: -40,
                         y: 0,
                     })
-                    .set("#flor-vestimenta-right", {
+                    .set("#flor-adultos-right", {
                         rotation: 8,
                         scaleX: -0.9,
                         scaleY: 0.9,
                         x: 40,
                         y: 0,
                     })
-                    .set("#hoja-vestimenta-left", {
+                    .set("#hoja-adultos-left", {
                         rotation: -6,
                         scale: 0,
                         y: 0,
                     })
-                    .set("#hoja-vestimenta-right", {
+                    .set("#hoja-adultos-right", {
                         scaleX: 0,
                         scaleY: 0,
                         rotation: 6,
@@ -525,11 +499,20 @@
             },
         });
 
-        console.log(
-            "👔✨ Sección de código de vestimenta con hojas vivas activada!",
-        );
+        console.log("🍾✨ Sección Solo Adultos con hojas vivas activada!");
     };
 
-    document.addEventListener("DOMContentLoaded", initVestimenta);
-    document.addEventListener("astro:page-load", initVestimenta);
+    document.addEventListener("DOMContentLoaded", initAdultos);
+    document.addEventListener("astro:page-load", initAdultos);
 </script>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 🎨 ESTILOS PARA CONVERTIR IMÁGENES NEGRAS A DORADO          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<style>
+    /* Filtro que convierte imágenes PNG negras al color dorado #9C7A2E */
+    .verde-filter {
+        filter: brightness(0) saturate(100%) invert(18%) sepia(42%)
+            saturate(525%) hue-rotate(115deg) brightness(78%) contrast(105%);
+    }
+</style>
