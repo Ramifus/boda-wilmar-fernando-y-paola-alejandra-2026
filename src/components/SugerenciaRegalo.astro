@@ -167,6 +167,111 @@
                     Paola Alejandra Dávila Vacaflor
                 </p>
             </div>
+
+            <!-- Separador ornamental -->
+            <div class="flex items-center justify-center gap-3 my-6">
+                <div
+                    class="w-16 h-[2px] bg-gradient-to-r from-transparent to-[#C9A961]"
+                >
+                </div>
+                <div class="w-2 h-2 rounded-full bg-[#C9A961]"></div>
+                <div
+                    class="w-16 h-[2px] bg-gradient-to-l from-transparent to-[#C9A961]"
+                >
+                </div>
+            </div>
+
+            <!-- CUADRO REGALO FÍSICO -->
+            <div
+                class="relative px-6 py-6 border border-[#C9A961]/60 text-center"
+                id="tarjeta-direccion-regalo"
+            >
+                <!-- Esquinas decorativas -->
+                <div
+                    class="absolute -top-[1px] -left-[1px] w-4 h-4 border-t-2 border-l-2 border-[#C9A961]"
+                >
+                </div>
+                <div
+                    class="absolute -top-[1px] -right-[1px] w-4 h-4 border-t-2 border-r-2 border-[#C9A961]"
+                >
+                </div>
+                <div
+                    class="absolute -bottom-[1px] -left-[1px] w-4 h-4 border-b-2 border-l-2 border-[#C9A961]"
+                >
+                </div>
+                <div
+                    class="absolute -bottom-[1px] -right-[1px] w-4 h-4 border-b-2 border-r-2 border-[#C9A961]"
+                >
+                </div>
+
+                <p
+                    class="text-[#0F3D2E] text-sm md:text-lg lg:text-xl leading-relaxed mb-4"
+                >
+                    Si desean hacernos llegar un regalo físico, pueden enviarlo o
+                    dejarlo en la siguiente dirección:
+                </p>
+
+                <!-- Icono de ubicación -->
+                <div class="flex justify-center mb-2">
+                    <svg
+                        class="w-7 h-7 md:w-9 md:h-9 text-[#C9A961]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"
+                        ></path>
+                        <circle cx="12" cy="10" r="2.5"></circle>
+                    </svg>
+                </div>
+
+                <div class="mb-4 space-y-1">
+                    <p
+                        class="text-[#C9A961] font-semibold text-sm md:text-lg lg:text-xl"
+                    >
+                        Calle Gregorio Mendizábal N.º 27
+                    </p>
+                    <p
+                        class="text-[#C9A961] font-semibold text-sm md:text-lg lg:text-xl"
+                    >
+                        Hostal Gobernador
+                    </p>
+                    <p class="text-[#0F3D2E] text-sm md:text-lg lg:text-xl">
+                        Paralela al Parque Bolívar
+                    </p>
+                </div>
+
+                <!-- Mini separador -->
+                <div class="flex items-center justify-center gap-2 mb-4">
+                    <div
+                        class="w-10 h-px bg-gradient-to-r from-transparent to-[#C9A961]/40"
+                    >
+                    </div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#C9A961]/50"></div>
+                    <div
+                        class="w-10 h-px bg-gradient-to-l from-transparent to-[#C9A961]/40"
+                    >
+                    </div>
+                </div>
+
+                <p
+                    class="text-[#0F3D2E] text-sm md:text-lg lg:text-xl leading-relaxed italic"
+                >
+                    También pueden utilizar el código QR que encontrarán en la
+                    invitación. 🤍
+                </p>
+            </div>
+
+            <p
+                class="text-center text-[#626a54] text-sm md:text-lg lg:text-xl mt-6"
+            >
+                Agradecemos muchísimo cada muestra de cariño y generosidad que
+                nos acompañe en esta nueva etapa. ✨
+            </p>
         </div>
     </div>
 
@@ -334,6 +439,7 @@
 
         gsap.set("#tarjeta-regalo", { opacity: 0, y: 20 });
         gsap.set("#tarjeta-qr", { opacity: 0, y: 30, scale: 0.95 });
+        gsap.set("#tarjeta-direccion-regalo", { opacity: 0, y: 25 });
 
         // ═══ ANIMACIÓN PRINCIPAL ═══
         ScrollTrigger.create({
@@ -432,6 +538,16 @@
                             ease: "back.out(1.4)",
                         },
                         1.1,
+                    )
+                    .to(
+                        "#tarjeta-direccion-regalo",
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 1,
+                            ease: "power2.out",
+                        },
+                        1.4,
                     );
 
                 // ═══════════════════════════════════════════════════
@@ -533,7 +649,7 @@
 
                 const tl = gsap.timeline();
 
-                tl.to("#tarjeta-qr, #tarjeta-regalo", {
+                tl.to("#tarjeta-qr, #tarjeta-regalo, #tarjeta-direccion-regalo", {
                     opacity: 0,
                     y: 20,
                     duration: 0.3,
